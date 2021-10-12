@@ -1,0 +1,67 @@
+
+
+{% extends "mainpage.html" %}
+{% block head %}{% endblock head %}
+{% block main %}
+<!DOCTYPE html>
+<html lang="en">
+<style>
+.container{
+	background-color:white;
+	text-align: center;
+	color: blue;
+}
+th, td {
+  border: 1px solid blue;
+  text-align: left;
+  padding: 10px;
+}
+
+.navbutton a:link, a:visited {
+  background-color: #8292FA  ;
+  color: white;
+  width:300px;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 25px;  
+}
+.navbutton a:hover, a:active {
+  background-color: blue;
+  }
+body{
+font-family:calibri;
+}
+ </style>
+
+<body>
+<center>
+<div style="width:1200px;" class="container">
+</p>
+<h1 style="color:#900C3F; " >Sentiment Analysis Based on User Input </h1>
+</p>
+<label style="font-size:15px; color:#900C3F;"><u>Sentiment Analysis Result</u></label>
+</p>
+<center>
+<table id="Sentimenttable">
+<caption style="text-align:left">Sentiment Analysis:</caption>
+{% for k,v in customresult.items() %}
+<tr>
+<th>{{k}} </th>
+<td>{{v}}</td>
+</tr>
+{% endfor %}
+</table>
+</center>
+</p>
+<div class="navbutton">
+</p>
+<a href="http://127.0.0.1:5000/Home">Click here to go to Home page</a>
+</div>
+</div>
+</center>
+</body>
+
+</html>
+{% endblock main %}

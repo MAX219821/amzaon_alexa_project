@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+.container{
+	background-color:white;
+}
+.container1 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+ .centered {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+body{
+font-family:calibri;
+border-style: groove;
+}
+</style>
+<head>
+  <title>SENTIMENT ANALYSIS PROGRAM</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="color:orange;">NLP SENTIMENT ANALYSIS PROGRAM</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="http://127.0.0.1:5000/Home">HOME</a></li>
+	  <li><a href="http://127.0.0.1:5000/tableau">Tableau Visualization of Rating for dataset </a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SELECT TYPE OF ANALYSIS<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="http://127.0.0.1:5000/Rating">Rating Based Analysis </a></li>
+          <li><a href="http://127.0.0.1:5000/review">Review Based Analysis</a></li>
+		  <!--		  
+          <li><a href="http://127.0.0.1:5000/overall">Rating and Review Analysis</a></li>
+		  -->
+        </ul>
+      </li>
+      <li><a href="http://127.0.0.1:5000/customsentiment">Predict Sentiments for Custom Review</a></li>
+	  </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="http://127.0.0.1:5000/"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
+    </ul>
+  </div>
+</nav>
+{% block head %}
+<div class="container" style="width:1500px;" >
+	<div class="container1">
+	<div class="centered" style="color:#900C3F; top:70px;">
+	</p>
+	<p style="font-size:24px;" ><strong>ExcelR Data Science Project - By P58 - Group 7</strong></p>
+	<p style="font-size:20px;" ><strong>Sentiment analysis Application</strong></p>
+	<p style="font-size:20px;">Welcome to Amazon Alexa Sentiments Analysis Program based on data from Amazon</p>
+	<p>{{Display}}</p>
+	</p>
+	</div>
+	</div> 
+	</p>
+	<div style="color:#900C3F;">
+	<img style="width:600px;" src="https://cdn.analyticsvidhya.com/wp-content/uploads/2019/11/performing-twitter-sentiment-analysis1.jpg" class="img-thumbnail" alt="NLP">
+	<h3><strong>OverView of Sentiment Analysis Application</strong></h3>
+	</p>
+	<ol>
+	<li> This Application is designed for rating and review based analysis on large amount of data for Amazon Alexa.</p></li>
+	<li> This application has 3 modes to operate 1- Rating based analysis 2- Review based analysis 3- Both Rating and Review based Analysis.</p></li>
+	<li> Data for Analysis is for more than 3000 users ratings and reviews for amazon alexa.</p></li>
+	<li> Application has custom mode for analyzing statement sentiments entered by user . </p></li>
+	<li> Thank you for your Interest and Support.</p></li>
+	</ol>
+	</div>
+	</div> 
+
+{% endblock head %}
+{% block main %}
+<body style="background-color:white;"></body>
+{% endblock main %}
+</body>
+</html>

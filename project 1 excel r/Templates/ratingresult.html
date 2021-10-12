@@ -1,0 +1,76 @@
+
+{% extends "mainpage.html" %}
+{% block head %}{% endblock head %}
+{% block main %}
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+.container{
+	background-color:white;
+	text-align: center;
+	color: blue;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+table,th,td {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 30%;
+  border: 1px solid #ddd;
+  padding: 5px;
+	text-align:left;
+}
+
+.navbutton a:link, a:visited {
+  background-color: #8292FA  ;
+  color: white;
+  width:300px;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 25px;  
+}
+.navbutton a:hover, a:active {
+  background-color: blue;
+  }
+  
+body{
+font-family:calibri;
+background-color:white ;
+border-style: groove;
+}
+ </style>
+ <body>
+<div class="container" style="width:1200px; border-style: groove;" >
+</p>
+<center>
+<h1 style="color:#900C3F;" >Rating Analysis Based on User Rating </h1>
+</p>
+<label style="font-size:15px; color:#900C3F;"><u>RATING RESULTS</u></label>
+</p>
+<table style="border-color:white; "id="Ratingtable">
+<caption style="text-align:left; color:#900C3F;">Rating Analysis:</caption>
+{% for k,v in rating.items() %}
+<tr>
+<th>{{k}}: </th>
+<td>{{v}}</td>
+</tr>
+{% endfor %}
+</table>
+</p>
+<div class="navbutton">
+<a href="http://127.0.0.1:5000/tableau">Click here to go to Dashboard for Rating Analysis</a>
+</p>
+<a href="http://127.0.0.1:5000/Home">Click here to go to Home page</a>
+</div>
+</div>
+</center>
+</body>
+
+</html>
+{% endblock main %}

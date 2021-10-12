@@ -1,0 +1,74 @@
+
+{% extends "mainpage.html" %}
+{% block head %}{% endblock head %}
+{% block main %}
+<html>
+<style>
+.container{
+	background-color:white;
+	text-align: center;
+	color: blue;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+table , th, td{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 30%;
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 16px;
+}
+
+.navbutton a:link, a:visited {
+  background-color: #8292FA  ;
+  color: white;
+  width:300px;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 25px;  
+}
+
+.navbutton a:hover, a:active {
+  background-color: blue;
+  }
+body{
+font-family:calibri;
+background-color:white;
+border-style: groove;
+}
+ </style>
+    <body>
+    <div class="container" style="width:1200px; border-style: groove;" >
+	<center>
+    <h1> <p style="font-size:18px; font-weight: bold; color:#900C3F;">Sentiment Analysis on Reviews Result</h1>
+	<label style="font-size:15px; font-weight: bold; color:#900C3F;"> <u>Product Reviews Overview</u></label>
+	</p>
+	<table border="1">
+	{% for k,v in overallpred.items() %}
+	<tr>
+	<th >{{k}}: </th>
+	<td>{{v}}</td>
+	</tr>
+	{% endfor %}
+	</table>
+	</p>
+	<div>
+	<h1 style="font-size:15px; font-weight: bold; color:#900C3F;"> <u>Wordcloud for Reviews</u></h1>
+	<img src="/static/wordcloud.png"  alt="Natural Language Processing Wordcloud" width="500" height="300">
+	</div>
+	</p>
+	<div class="navbutton">
+	<a href="http://127.0.0.1:5000/Home">Click here to go to Home page</a>
+	</div>
+	</div>
+	</center>
+    </body>
+	
+</html>
+{% endblock main %}

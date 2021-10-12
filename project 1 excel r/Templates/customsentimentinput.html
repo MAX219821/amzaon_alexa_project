@@ -1,0 +1,38 @@
+
+
+{% extends "mainpage.html" %}
+{% block head %}{% endblock head %}
+{% block main %}
+<!DOCTYPE html>
+<html lang="en">
+<style>
+body{
+font-family:calibri;
+background-color:white;
+text-align: center;
+border-style: groove;
+}
+
+ </style>
+ 
+<body>
+<center>
+<div class="container" style="width:1200px;">
+</p>
+<h1 style="color:#900C3F;" >Enter a Sentence to get sentiment Analysis </h1>
+</p>
+<form method="POST" > 
+<label><b>Input    
+</b>    
+</label>    
+<input type="text" name="sentence" id="sentence" placeholder=" Please Enter Sentence for Analysis" size="50" required>    
+<br><br> 
+<input style="background-color:blue; color:white;" type='submit' value='submit'>      
+<br><br>        
+</form>       
+</div>
+</center>
+</body>
+
+</html>
+{% endblock main %}
